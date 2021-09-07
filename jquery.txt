@@ -1,0 +1,92 @@
+CDN---------------------------
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+crossorigin="anonymous"></script>
+
+jquery es una libreria de js rapida chiquita y poderosa en funciones podemos manejar 
+eventos maniputal el dom html agregar animaciones, ajax entre otras cositas.
+
+VENTAJAS DE UTILIZAR JQUERY------
+compatibilidad con navegadores antiguos
+facil escritura y comprension del codigo
+es open source
+mucho plugins
+facilida de utilizar ajax 
+
+jquery funciones 
+.val(); esta funcion nos devuelve lo que escribio el usuario
+ en el campo imput hasta se puede poner una variable alante
+
+preventDefault(); se utiliza para cancelar lo que esta por defecto en el navegador
+
+podemos selecionar atraver de las etiquetas (html),clases y ID
+$('h1').html('Etiqueta h1'); -->    
+$('.display-4').html('desde clase');
+$('#idh1').html('desde id');
+
+
+agregar una clase 
+$(selector).addClass(className);
+remover una clase
+$(selector).removeClass(className);
+pone un display - none ala clase para que no se vea 
+$(selector).hide(className);
+
+attr es para agregar un atributo
+$(img).attr(src, goku.png);
+
+$(selector).append(content); --introduce un contenido al final del elemento selecionado
+$(selector).prepend(content); --introduce un contenido al princio del elemento selecionado
+$(selector).after(content); --introduce un contenido al despues del elemento selecionado
+$(selector).before(content); --introduce un contenido antes del elemento selecionado
+
+$('#color-azul').css('color','blue');
+$('#color-azul').css({color: 'blue', background:'salmon', padding:'20px'}); 
+
+EVENTOS con JQUERY
+HTML:
+
+
+
+<div class="container my-5">
+  <button class="btn btn-warning" id="ocultar">Ocultar</button>
+  <button class="btn btn-warning" id="mostrar">Mostrar</button>
+  <button class="btn btn-warning" id="toggle">Toggle</button>
+
+  <div class="mt-5 bg-danger text-white py-5 text-center text-uppercase" id="elemento">
+    <p>Este es un elemento dinámico</p>
+  </div>
+
+</div>
+
+
+
+JS
+$(document).ready(function() {
+  var ocultar = $("#ocultar");
+  var mostrar = $("#mostrar");
+  var toggle = $("#toggle");
+  var elemento = $("#elemento");
+
+  ocultar.click(function() {
+    elemento.hide(1000);
+  });
+
+  mostrar.click(function() {
+    elemento.show(1000);
+  });
+
+  toggle.click(function() {
+    elemento.toggle(1000);
+  });
+});
+funciones con eventos 
+
+    fadeIn()
+    slideDown()
+    animate()
+    stop()
+    Callback Functions
+    Chaining
+
+

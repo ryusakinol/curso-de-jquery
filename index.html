@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CND jQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        
+        <button  class="btn btn-primary" id="btn1">Agregar</button>
+        <button  class="btn btn-danger" id="btn2">Quitar</button>
+        <button  class="btn btn-warning" id="btn3">Toogle</button>
+       <div class="bg-dark text-white mt-5" id="pf">
+           <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi molestias nihil recusandae illo velit culpa optio atque sint eius iste vero eum autem explicabo harum, voluptate eos, neque ad suscipit!</p>
+       </div>
+
+    </div>
+
+    
+
+<div class="container my-5">
+    <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" autocomplete="off">
+    <div class="bg-dark text-white mt-5 p-2" id="contenido">
+      Estoy esperando...
+    </div>
+</div>
+  
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  
+<script>
+   
+     $(document).ready(function() {
+        //Declarar variables reutilizables
+        var input = $("#nombre");
+        var contenido = $("#contenido");
+
+        //Evento keyup
+        input.keyup(function() {
+            console.log(input.val()); //verificamos en consola
+            contenido.html(input.val()); //agregamos en contenido
+
+            //Podemos verificar si está vacio el input
+            if (input.val() === "") {
+            contenido.html("Estoy esperando...");
+            }
+        });
+        });
+
+       
+
+
+
+         // <!-- <script>
+    //     $(document).ready(function () {
+            
+    //         var parrafo = $('#pf');
+            
+    //         //Evento click Agregando clase
+    //         $('#btn1').click(function(){
+    //             parrafo.addClass('text-center');
+    //         });
+
+    //         //Evento click Agregando estilo en css
+    //         $('#btn2').click(function(){
+    //             parrafo.removeClass('text-center');
+    //         });
+
+    //         //Alternativa al evento click
+    //         $('#btn3').on('click',function(){
+    //             parrafo.toggleClass('display-4');
+    //         });
+
+    //     }); -->
+    </script>
+</body>
+</html>
